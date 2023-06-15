@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import CustomButton from "../CustomButton";
+import Button from "./Button";
 
 export default function Hero() {
   const handleScroll = () => null;
@@ -16,8 +16,8 @@ export default function Hero() {
           Streamline your car rental experience with our effortless booking
           process.
         </p>
-        <CustomButton
-          title="Explore Cars"
+        <Button
+          text="Explore Cars"
           containerStyles="bg-primary-blue text-white rounded-full mt-10"
           handleClick={handleScroll}
         />
@@ -25,8 +25,8 @@ export default function Hero() {
       <div className="hero__image-container">
         <div className="hero__image">
           <Image src="/hero.png" alt="hero" fill className="object-contain" />
-          <div className="hero__image-overlay" />
         </div>
+        <div className="hero__image-overlay" />
       </div>
     </div>
   );

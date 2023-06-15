@@ -2,19 +2,20 @@
 
 import { ButtonProps } from "~/types";
 
-export default function CustomButton({
-  title,
+export default function Button({
+  text,
+  type,
   containerStyles,
   handleClick,
 }: ButtonProps) {
   return (
     <button
       disabled={false}
-      type="button"
+      type={type ?? "button"}
       className={`custom-btn ${containerStyles}`}
       onClick={handleClick}
     >
-      <span className={`flex-1`}>{title}</span>
+      <span className={`flex-1`}>{text}</span>
     </button>
   );
 }

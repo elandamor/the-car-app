@@ -1,7 +1,8 @@
 import { MouseEventHandler } from "react";
 
 export interface ButtonProps {
-  title: string;
+  text: string;
   containerStyles?: string;
   handleClick?: MouseEventHandler<HTMLButtonElement>;
+  type?: "button" | "submit";
 }
