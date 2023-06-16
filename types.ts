@@ -11,3 +11,7 @@ export interface SearchManufacturerProps {
   manufacturer: string;
   setManufacturer: Dispatch<SetStateAction<string>>;
 }
+
+export interface CustomFilterProps {
+  title: string;
+}
