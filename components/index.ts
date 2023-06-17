@@ -7,3 +7,4 @@ export { default as Hero } from "./Hero";
 export { default as NavBar } from "./NavBar";
 export { default as SearchBar } from "./SearchBar";
 export { default as SearchManufacturer } from "./SearchManufacturer";
+export { default as ShowMore } from "./ShowMore";

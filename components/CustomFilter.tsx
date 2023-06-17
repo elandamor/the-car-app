@@ -5,20 +5,14 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Fragment, useState } from "react";
 import { CustomFilterProps } from "~/types";
+import { updateSearchParams } from "~/utils";
 
 export default function CustomFilter({ title, options }: CustomFilterProps) {
   const [selected, setSelected] = useState(options[0]);
   const router = useRouter();
 
   const handleUpdateSearchParams = (title: string, value: string) => {
-    const searchParams = new URLSearchParams(window.location.search);
-
-    searchParams.set(title, value.toLowerCase());
-
-    const newPathname = `${
-      window.location.pathname
-    }?${searchParams.toString()}`;
-
+    const newPathname = updateSearchParams(title, value.toLowerCase());
     router.push(newPathname);
   };
 
