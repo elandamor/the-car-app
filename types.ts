@@ -15,8 +15,13 @@ export interface SearchManufacturerProps {
   setManufacturer: Dispatch<SetStateAction<string>>;
 }
 
+export interface OptionProps {
+  title: string;
+  value: string;
+}
 export interface CustomFilterProps {
   title: string;
+  options: Array<OptionProps>;
 }
 
 export type Car = {
