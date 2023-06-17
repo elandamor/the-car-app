@@ -1,6 +1,7 @@
 import { CarCard, CustomFilter, Hero, SearchBar } from "~/components";
 import { fetchCars } from "~/utils";
 
+// @ts-expect-error - Resolve prop types
 export default async function Home({ searchParams }) {
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || "",
